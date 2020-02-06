@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/neo-jack-official/FastJack/master/img/vista01.png)
+![alt text](https://raw.githubusercontent.com/neo-jack-official/FasterJack/vista01.png)
 # FasterJack para Python 3 (fasterjack.py)
 # Es una Herramienta de denegacion para Servidores-Web por Neo-Jack FEB/2020
 
