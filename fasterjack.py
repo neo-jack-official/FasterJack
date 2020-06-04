@@ -24,30 +24,46 @@ def continuar():
 		sys.exit()
 
 def conec_tor():
-	if tor is True:
-		print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Seguridad de IP" + Style.RESET_ALL)
-		ipcheck_url = 'http://icanhazip.com'
-		socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050)
-		socket.socket = socks.socksocket
-		try:
-			tor_ip = requests.get(ipcheck_url)
-			tor_ip = str(tor_ip.text)
-			print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Estado: Tor " + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "Activado" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + " --> IP: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + tor_ip + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + " OK.." + Style.RESET_ALL)
-		except requests.exceptions.RequestException as e:
-			sys.exit(0)
-	if tor is False:
-		print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Seguridad de IP" + Style.RESET_ALL)
-		ipcheck_url2 = 'http://icanhazip.com'
-		try:
-			regular_ip = requests.get(ipcheck_url2)
-			regular_ip = str(regular_ip.text)
-			print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Estado: Tor " + Style.RESET_ALL + Fore.RED + Style.BRIGHT + "Desactivado" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + " --> IP: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + regular_ip + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + " OK.." + Style.RESET_ALL)
-			print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.YELLOW + Style.BRIGHT + "SIEMPRE USE VPN, SU UBICACION PODRIA QUEDAR EXPUESTA." + Style.RESET_ALL)
-			print("")
-			continuar()
-		except requests.exceptions.RequestException as e:
-			sys.exit(0)
-
+    if tor is True:
+        print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Seguridad de IP" + Style.RESET_ALL)
+        ipcheck_url1 = 'http://icanhazip.com'
+        ipcheck_url2 = 'http://icanhazptr.com'
+        socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050)
+        socket.socket = socks.socksocket
+        try:
+            tor_ip = requests.get(ipcheck_url1)
+            tor_ip = str(tor_ip.text)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Servidor Usado: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "01 --> " + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "icanhazip.com" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT  + Style.RESET_ALL)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Estado: Tor " + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "Activado" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + " --> IP: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + tor_ip + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + " OK.." + Style.RESET_ALL)
+        except requests.exceptions.ConnectionError as errc:
+            tor_ip = requests.get(ipcheck_url2)
+            tor_ip = str(tor_ip.text)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Servidor Usado: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "02 --> " + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "icanhazptr.com" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT  + Style.RESET_ALL)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Estado: Tor " + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "Activado" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + " --> IP: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + tor_ip + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + " OK.." + Style.RESET_ALL)
+        except requests.exceptions.RequestException as e:
+            sys.exit(0)
+    if tor is False:
+        print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Seguridad de IP" + Style.RESET_ALL)
+        ipcheck_url01 = 'http://icanhazip.com'
+        ipcheck_url02 = 'http://icanhazptr.com'
+        try:
+            regular_ip = requests.get(ipcheck_url01)
+            regular_ip = str(regular_ip.text)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Servidor Usado: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "01 --> " + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "icanhazip.com" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT  + Style.RESET_ALL)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Estado: Tor " + Style.RESET_ALL + Fore.RED + Style.BRIGHT + "Desactivado" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + " --> IP: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + regular_ip + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + " OK.." + Style.RESET_ALL)
+            print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.YELLOW + Style.BRIGHT + "SIEMPRE USE VPN, SU UBICACION PODRIA QUEDAR EXPUESTA." + Style.RESET_ALL)
+            print("")
+            continuar()
+        except requests.exceptions.ConnectionError as errc:
+            regular_ip = requests.get(ipcheck_url02)
+            regular_ip = str(regular_ip.text)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Servidor Usado: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "01 --> "  + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + "icanhazptr.com" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT  + Style.RESET_ALL)
+            print(Fore.WHITE + Style.BRIGHT + " NOTA: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Estado: Tor " + Style.RESET_ALL + Fore.RED + Style.BRIGHT + "Desactivado" + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + " --> IP: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + regular_ip + Style.RESET_ALL + Fore.GREEN + Style.BRIGHT + " OK.." + Style.RESET_ALL)
+            print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.YELLOW + Style.BRIGHT + "SIEMPRE USE VPN, SU UBICACION PODRIA QUEDAR EXPUESTA." + Style.RESET_ALL)
+            print("")
+            continuar()
+        except requests.exceptions.RequestException as e:
+            sys.exit(0)
 def mix_metodo():
 	print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Metodos" + Style.RESET_ALL)
 	global mmetodo
