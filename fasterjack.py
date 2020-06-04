@@ -26,7 +26,7 @@ def continuar():
 def conec_tor():
 	if tor is True:
 		print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Seguridad de IP" + Style.RESET_ALL)
-		ipcheck_url = 'https://canihazip.com/s'
+		ipcheck_url = 'http://icanhazip.com'
 		socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, '127.0.0.1', 9050)
 		socket.socket = socks.socksocket
 		try:
@@ -37,7 +37,7 @@ def conec_tor():
 			sys.exit(0)
 	if tor is False:
 		print(Fore.YELLOW + Style.BRIGHT + " INFO: " + Style.RESET_ALL + Fore.BLUE + Style.BRIGHT + "Comprobando: " + Style.RESET_ALL + Fore.WHITE + Style.BRIGHT + "Seguridad de IP" + Style.RESET_ALL)
-		ipcheck_url2 = 'https://canihazip.com/s'
+		ipcheck_url2 = 'http://icanhazip.com'
 		try:
 			regular_ip = requests.get(ipcheck_url2)
 			regular_ip = str(regular_ip.text)
