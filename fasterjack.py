@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-# FasterJack made by Neo-Jack-Official Feb/2020
+# FasterJack made by Neo-Jack-Official JUN/2020
 
 from colorama import Fore, Back, Style
 from queue import Queue
