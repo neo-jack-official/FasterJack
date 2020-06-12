@@ -1,3 +1,5 @@
+Imagen: FasterJack_en (es igual para version en español "fasterjack_es.py")
+![alt text](https://raw.githubusercontent.com/neo-jack-official/FasterJack/master/nuevo.png)
 Imagen: FasterJack Clasico
 ![alt text](https://raw.githubusercontent.com/neo-jack-official/FasterJack/master/vista01.png)
 # FasterJack para Python 3 (fasterjack.py)
