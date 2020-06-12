@@ -4,7 +4,7 @@ Imagen: FasterJack_en (es igual para version en español "fasterjack_es.py")
 Imagen: FasterJack Clasico
 ![alt text](https://raw.githubusercontent.com/neo-jack-official/FasterJack/master/vista01.png)
 # FasterJack para Python 3 (fasterjack.py)
-# Es una Herramienta de denegacion para Servidores-Web por Neo-Jack FEB/2020
+# Es una Herramienta de denegacion para Servidores-Web por Neo-Jack 
 
 ## ¿Qué es FasterJack?
 En esta version, hemos querido pasar de una aplicacion simple a algo un poco mas sofisticado de forma sutil.
