@@ -108,3 +108,10 @@ Abrir Terminal:
 * `sudo apt-get install tor-geoipdb`
 * `sudo /etc/init.d/tor restart`
 
+## Tengo problemas con los moduloso o Librerías
+
+se a incluido un archivo Librarys.zip, aquí encontraras todas las librerías que FasterJack necesita.
+Si alguna no esta instalada en tu equipo.
+Solo abre el ZIP y arrastra la librería a la carpeta donde este FasterJack.
+Si no entiendes mucho, solo copia todo lo que esta dentro del ZIP a la carpeta de FasterJack.
+
