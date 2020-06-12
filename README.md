@@ -1,3 +1,4 @@
+Imagen: FasterJack Clasico
 ![alt text](https://raw.githubusercontent.com/neo-jack-official/FasterJack/master/vista01.png)
 # FasterJack para Python 3 (fasterjack.py)
 # Es una Herramienta de denegacion para Servidores-Web por Neo-Jack FEB/2020
@@ -32,14 +33,20 @@ Python 3.6
 
 
 ## Como lo utiliso?
+# FasterJack_Es (Nuevo y facil de usar)
+Si `fasterjack_es.py` y sus dependencias estan en Escritorio:
+1) Abra terminal, Escriba `cd Escritorio`
+2) Ejecute bajo Python 3.6:
+* `python3 fasterjack_es.py`
 
-Si `fasterjack.py` y sus dependencias estan en Escritorio:
+# FasterJack Clasico
+Si `fasterjack_Clasico.py` y sus dependencias estan en Escritorio:
 1) Abra terminal, Escriba `cd Escritorio`
 2) Ejecute bajo Python 3.6:
 * `python3 fasterjack.py -t www.ejemplo.com` 
 * `python3 fasterjack.py -h` para acceder al menu de ayuda.
 
-## Opciones de Configuracion
+## Opciones de Configuracion FasterJack Clasico
 
 * `-h = Menu de Ayuda`
 * `-t = Web o IP`
@@ -49,7 +56,7 @@ Si `fasterjack.py` y sus dependencias estan en Escritorio:
 * `-T = Habilitar el enrutamiento TOR, por defecto: Desactivado`
 
 
-## Ejemplos de comandos.
+## Ejemplos de comandos FasterJack Clasico.
 
   Sin TOR:
 * `python fasterjack.py -t www.ejemplo.com`
